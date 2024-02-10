@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "542642439431",
+    "project_id": "ecommeria",
+    "storage_bucket": "ecommeria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542642439431:android:90a04da81717cab032f1a2",
+        "android_client_info": {
+          "package_name": "com.example.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542642439431-egarcp0js9nab0rhj6e2g646u52hqllb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.admin",
+            "certificate_hash": "da8cf90322656d7fb6625f32e02a69aff3bc7d67"
+          }
+        },
+        {
+          "client_id": "542642439431-l644cemttfeb58v609jao3blooc6gl3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA22PP9nmNsgR5NAKu4MG22ZeX__8sh6_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542642439431-a90jf004sirrh2hgigdpaa1lp1gg776j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542642439431:android:112667a83bab080d32f1a2",
+        "android_client_info": {
+          "package_name": "com.example.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542642439431-k9jj499v32ijjnbc0ji26ijabe2vn6id.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.delivery",
+            "certificate_hash": "da8cf90322656d7fb6625f32e02a69aff3bc7d67"
+          }
+        },
+        {
+          "client_id": "542642439431-l644cemttfeb58v609jao3blooc6gl3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA22PP9nmNsgR5NAKu4MG22ZeX__8sh6_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542642439431-a90jf004sirrh2hgigdpaa1lp1gg776j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542642439431:android:175fcf5370a2bf0d32f1a2",
+        "android_client_info": {
+          "package_name": "com.example.ecommeria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542642439431-8vi00q9uhjkj19rdnju0mgu4qc1eosnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecommeria",
+            "certificate_hash": "da8cf90322656d7fb6625f32e02a69aff3bc7d67"
+          }
+        },
+        {
+          "client_id": "542642439431-l644cemttfeb58v609jao3blooc6gl3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA22PP9nmNsgR5NAKu4MG22ZeX__8sh6_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542642439431-a90jf004sirrh2hgigdpaa1lp1gg776j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
