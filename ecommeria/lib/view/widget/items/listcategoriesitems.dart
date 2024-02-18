@@ -66,7 +66,7 @@ class Categories extends GetView<ItemscontrollerImp> {
             height: 70,
             width: 70,
             child: SvgPicture.network(
-                "http://192.168.1.4/ecommeria/upload/${categoriesModel.categoriesImage}",// link + name of image
+                "http://192.168.1.240/ecommeria/upload/cats/${categoriesModel.categoriesImage}",// link + name of image
                 color: ColorAPP.secoandColor),
           ),
           GetBuilder <ItemscontrollerImp>(builder: (controller) => Container(

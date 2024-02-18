@@ -44,7 +44,7 @@ class TopproductDetail extends GetView<ProductDetailcontrollerImp> {
                     height: 200,
                     fit: BoxFit.fill,
                     imageUrl:
-                        "http://192.168.1.4/ecommeria/upload/${controller.itemsModel.itemsImage}"),
+                        "http://192.168.1.240/ecommeria/upload/items/${controller.itemsModel.itemsImage}"),
               ),
             ),
           ),

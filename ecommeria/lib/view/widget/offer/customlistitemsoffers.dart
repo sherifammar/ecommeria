@@ -41,7 +41,7 @@ class CustomListItemsoffers extends GetView<OffersController> {
                           height: 250,
                           fit: BoxFit.fill,
                           imageUrl:
-                              "http://192.168.1.4/ecommeria/upload/${itemsmodel.itemsImage}"),
+                              "http://192.168.1.240/ecommeria/upload/${itemsmodel.itemsImage}"),
                     ),
                   ),
                   const SizedBox(

@@ -20,7 +20,7 @@ class Augement extends GetView<AugmentController> {
           Container(
         child: ModelView(
           url:
-              'http://192.168.1.4/ecommeria/upload/${controller.itemsModel.itemsImage.toString()}',
+              'http://192.168.1.240/ecommeria/upload/items/${controller.itemsModel.itemsImage.toString()}',
         ),
       ),
     );

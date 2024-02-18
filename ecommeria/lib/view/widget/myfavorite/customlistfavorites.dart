@@ -55,7 +55,7 @@ class CustomListFavorite extends GetView<MyFavoriteViewController> {
                       height: 250,
                       fit: BoxFit.fill,
                       imageUrl:
-                          "http://192.168.1.4/ecommeria/upload/${favoritemodel.itemsImage}"),
+                          "http://192.168.1.240/ecommeria/upload/${favoritemodel.itemsImage}"),
                 ),
               ),
               const SizedBox(
