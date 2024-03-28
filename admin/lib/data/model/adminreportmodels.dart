@@ -1,9 +1,9 @@
 class AdminReportModels {
-  String? totalwin;
-  String? totalitemsprice;
-  String? totalnumberorders;
-  String? totalcountitems;
-  String? totalpricedelivery;
+  // String? totalwin;
+  // String? totalitemsprice;
+  // String? totalnumberorders;
+  // String? totalcountitems;
+  // String? totalpricedelivery;
   String? id;
   String? itemsprice;
   String? countitems;
@@ -39,11 +39,12 @@ class AdminReportModels {
   String? ordersDelivery;
 
   AdminReportModels(
-      {this.totalwin,
-      this.totalitemsprice,
-      this.totalnumberorders,
-      this.totalcountitems,
-      this.totalpricedelivery,
+      {
+      //   this.totalwin,
+      // this.totalitemsprice,
+      // this.totalnumberorders,
+      // this.totalcountitems,
+      // this.totalpricedelivery,
       this.id,
       this.itemsprice,
       this.countitems,
@@ -79,11 +80,11 @@ class AdminReportModels {
       this.ordersDelivery});
 
   AdminReportModels.fromJson(Map<String, dynamic> json) {
-    totalwin = json['totalwin'];
-    totalitemsprice = json['totalitemsprice'];
-    totalnumberorders = json['totalnumberorders'];
-    totalcountitems = json['totalcountitems'];
-    totalpricedelivery = json['totalpricedelivery'];
+    // totalwin = json['totalwin'];
+    // totalitemsprice = json['totalitemsprice'];
+    // totalnumberorders = json['totalnumberorders'];
+    // totalcountitems = json['totalcountitems'];
+    // totalpricedelivery = json['totalpricedelivery'];
     id = json['id'];
     itemsprice = json['itemsprice'];
     countitems = json['countitems'];
@@ -121,11 +122,11 @@ class AdminReportModels {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['totalwin'] = this.totalwin;
-    data['totalitemsprice'] = this.totalitemsprice;
-    data['totalnumberorders'] = this.totalnumberorders;
-    data['totalcountitems'] = this.totalcountitems;
-    data['totalpricedelivery'] = this.totalpricedelivery;
+    // data['totalwin'] = this.totalwin;
+    // data['totalitemsprice'] = this.totalitemsprice;
+    // data['totalnumberorders'] = this.totalnumberorders;
+    // data['totalcountitems'] = this.totalcountitems;
+    // data['totalpricedelivery'] = this.totalpricedelivery;
     data['id'] = this.id;
     data['itemsprice'] = this.itemsprice;
     data['countitems'] = this.countitems;

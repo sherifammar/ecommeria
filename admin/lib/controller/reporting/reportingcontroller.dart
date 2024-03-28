@@ -25,6 +25,7 @@ class Reportingcontroller extends GetxController {
   StatusRequest? statusRequest = StatusRequest.none;
   ReportData report = ReportData(Get.find());
   Myservices myservices = Get.find();
+  
   List<FlSpot>? dummyData1;
 
   getChart() async {

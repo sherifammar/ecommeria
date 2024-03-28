@@ -20,12 +20,12 @@ class Linechart extends StatelessWidget {
   Widget build(BuildContext context) {
      Reportingcontroller controller = Get.put(Reportingcontroller());
    
-
-   
-    return 
+     return 
       Center(
         
         child: Container(
+          margin: EdgeInsets.all(10),
+          color: Color.fromARGB(146, 255, 235, 59),
           padding: EdgeInsets.all(10),
           child: LineChart(
                   LineChartData(
