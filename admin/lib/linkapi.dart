@@ -1,6 +1,6 @@
 class AppLink {
-  static const String server = "http://192.168.1.5/ecommeria/admin";
-  static const String imagelink = "http://192.168.1.5/ecommeria/upload";
+  static const String server = "http://192.168.1.240/ecommeria/admin";
+  static const String imagelink = "http://192.168.1.240/ecommeria/upload";
   static const String test = "$server/test.php";
 
   //==============auth========//
