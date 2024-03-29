@@ -34,10 +34,10 @@ class Price_amountproduct extends StatelessWidget {
         ),
         const Spacer(), // space between row and text
         Text(
-          "$price\$", //  connectorerror => \
+          "Discount $price\$", //  connectorerror => \
           style: const TextStyle(
               color: ColorAPP.primaryColor,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold),
         ),
       ],
