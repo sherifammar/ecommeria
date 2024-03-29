@@ -32,6 +32,7 @@ class ChechoutController extends GetxController {
   String? checkPayment;
   String? checkDelivery;
   String checkAddress = "0";
+  String? priceshiping;
 
   choosePaymentmethod(String val) {
     checkPayment = val;
@@ -99,7 +100,7 @@ class ChechoutController extends GetxController {
         "usersid": myservices.sharedPreferences.getString("id"),
         "ordersaddress": checkAddress.toString(),// convert addressid to string
         "orderstype": checkDelivery.toString(),
-        "orderspricedelivery": "10",// myservices.sharedPreferences.getString('priceofdelivery'),
+        "orderspricedelivery": priceshiping,// myservices.sharedPreferences.getString('priceofdelivery'),
         "ordersprice": orderprice,
         "orderscoupon": couponid,
         "coupondiscount": discountcoupon.toString(),
@@ -139,6 +140,7 @@ payCard(){
     orderprice = Get.arguments["priceorder"]; // it is string from cart page
     couponid = Get.arguments["couponid"];
     discountcoupon = Get.arguments["discountcoupon"].toString();
+    priceshiping= Get.arguments["shiping"];
     getAddressview();
     super.onInit();
   }

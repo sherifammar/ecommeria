@@ -235,7 +235,8 @@ getTotalConstdeliveryPrice() {
       Get.toNamed(AppRoutes.checkout, arguments: {
         "couponid": couponid ?? "0",
         "priceorder": priceorder.toString(),
-        "discountcoupon": discountcoupon.toString()
+        "discountcoupon": discountcoupon.toString(),
+        "shiping":deliveryPrice.toString()
       });
     }
   }
