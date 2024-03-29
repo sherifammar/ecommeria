@@ -20,19 +20,23 @@ class Cart extends StatelessWidget {
           title: const Text(" My cart"),
         ),
         bottomNavigationBar: GetBuilder<CartController>(
-            builder: (controller) => CustomBottomNvbar(
-                  price: '${cartcontroller.priceorder}!',
+            builder: (controller) => 
+            
+            CustomBottomNvbar(
+                  price: controller.getTotalConstdeliveryPrice().toString(),
                   // discount: '${controller.discountcoupon}',
                   // totalprice: '${controller.getTotalWithdeliveryPrice()}!', //السعر الكلى مضاف اليه التوصيل
-                  totalprice: '${controller.getTotalPrice()}!',// السعر بدون التوصيل 
+                  totalprice: controller.getTotalConstdeliveryPrice().toString(),
                   controllercoupon: controller.controllercoupon!,
+                  shipping: controller.deliveryPrice!,
                   // shipping: controller.deliveryPrice!,// اضافه السعر من الخريطه
-                  shipping: "0",// شكل كام عند وائل 
                   onApplycoupon: () {
                     controller.couponView();
+                    
                   },
                   discountcoupon: '${controller.discountcoupon}',
-                )),
+                )
+                ),
         body:
          GetBuilder<CartController>(
             builder: (controller) => HandingDataView(

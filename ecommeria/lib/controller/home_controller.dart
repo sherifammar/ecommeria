@@ -1,4 +1,4 @@
-import 'package:ecommeria/core/function/delivertprice.dart';
+
 import 'package:ecommeria/core/services/servives.dart';
 import 'package:ecommeria/data/datasourse/remote/home_data.dart';
 
@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 import '../core/class/StatusRequest.dart';
 import '../core/constant/nameroutes.dart';
-import '../core/function/deliverytime.dart';
+
 import '../core/function/handlingdatacontroller.dart';
 import '../data/model/itemsmodel.dart';
 
@@ -82,20 +82,20 @@ class HomeControllerImp extends HomeController {
         settingDelivery = setting[0]["setting_deliverytime"]; // for wael course
         myservices.sharedPreferences.setString('delivery', settingDelivery);
         // =================================== اضاف وقت وصول الطلب و السعر 
-        timearrive = await deliveryTime(
-                double.parse(setting[0]["setting_startlat"]),
-                double.parse(setting[0]["setting_long"]),
-                int.parse(setting[0]["setting_speed"]))
-            .toString();
-        print(" =================time home page=================");
-        print(timearrive);
+        // timearrive = await deliveryTime(
+        //         double.parse(setting[0]["setting_startlat"]),
+        //         double.parse(setting[0]["setting_long"]),
+        //         int.parse(setting[0]["setting_speed"]))
+        //     .toString();
+        // print(" =================time home page=================");
+        // print(timearrive);
 
-        deliveryPrice = priceOfdelivery(
-                double.parse(setting[0]["setting_startlat"]),
-                double.parse(setting[0]["setting_long"]),
-                int.parse(setting[0]["setting_pricepekilo"]))
-            .toString();
-        print(deliveryPrice);
+        // deliveryPrice = priceOfdelivery(
+        //         double.parse(setting[0]["setting_startlat"]),
+        //         double.parse(setting[0]["setting_long"]),
+        //         int.parse(setting[0]["setting_pricepekilo"]))
+        //     .toString();
+        // print(deliveryPrice);
       } else {
         statusRequest = StatusRequest.failure;
       }

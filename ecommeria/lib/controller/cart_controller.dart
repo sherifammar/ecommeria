@@ -26,6 +26,7 @@ class CartController extends GetxController {
   String? deliveryPrice;
    List setting = [];
    String settingDelivery = "";
+
    getdata() async {
     statusRequest = StatusRequest.loading; // for  loading
     var response = await hometdata
@@ -43,21 +44,25 @@ class CartController extends GetxController {
                //=================== for wael course
         settingDelivery = setting[0]["setting_deliverytime"]; // for wael course
         myservices.sharedPreferences.setString('delivery', settingDelivery);
-        // =================================== اضاف وقت وصول الطلب و السعر 
-        timearrive = await deliveryTime(
-                double.parse(setting[0]["setting_startlat"]),
-                double.parse(setting[0]["setting_long"]),
-                int.parse(setting[0]["setting_speed"]))
-            .toString();
-        print(" =================time home page=================");
-        print(timearrive);
+        // ===================================  اضاف وقت وصول الطلب و السعر 
+        // timearrive = await deliveryTime(
+        //         double.parse(setting[0]["setting_startlat"]),
+        //         double.parse(setting[0]["setting_long"]),
+        //         int.parse(setting[0]["setting_speed"]))
+        //     .toString();
+        // print(" =================time home page=================");
+        // print(timearrive);
 
-        deliveryPrice = priceOfdelivery(
-                double.parse(setting[0]["setting_startlat"]),
-                double.parse(setting[0]["setting_long"]),
-                int.parse(setting[0]["setting_pricepekilo"]))
-            .toString();
-        print(deliveryPrice);
+
+        // deliveryPrice = priceOfdelivery(
+        //         double.parse(setting[0]["setting_startlat"]),
+        //         double.parse(setting[0]["setting_long"]),
+        //         int.parse(setting[0]["setting_pricepekilo"]))
+        //     .toString();
+        // print(deliveryPrice);
+
+        //=================== اضافه سعر من صفحه الهوم 
+        deliveryPrice=  int.parse(setting[0]["setting_pricepekilo"]).toString();
       } else {
         statusRequest = StatusRequest.failure;
       }
@@ -65,11 +70,16 @@ class CartController extends GetxController {
 
     update(); // update ui
   }
-
-getTotalWithdeliveryPrice() {
+getTotalConstdeliveryPrice() {
   int shipingprice = int.parse(deliveryPrice!);
     return (priceorder + shipingprice   - priceorder * discountcoupon! / 100);
   }
+// getTotalWithdeliveryPrice() {
+//   int shipingprice = int.parse(deliveryPrice!);
+//     return (priceorder + shipingprice   - priceorder * discountcoupon! / 100);
+//   }
+
+//============================================
 
 
   //=============================
