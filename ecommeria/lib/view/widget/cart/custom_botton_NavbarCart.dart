@@ -9,7 +9,7 @@ import 'custombuttoncoupon.dart';
 
 class CustomBottomNvbar extends GetView<CartController> {
   final String price;
-  final String discount;
+  // final String discount;
   final String shipping;
   final String discountcoupon;
 
@@ -19,7 +19,7 @@ class CustomBottomNvbar extends GetView<CartController> {
   const CustomBottomNvbar(
       {super.key,
       required this.price,
-      required this.discount,
+      // required this.discount,
       required this.totalprice,
       required this.controllercoupon,
       required this.onApplycoupon,
@@ -82,19 +82,19 @@ class CustomBottomNvbar extends GetView<CartController> {
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "discount",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                    Text(
-                      "$discount\$",
-                      style: TextStyle(fontSize: 15),
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     Text(
+                //       "discount",
+                //       style: TextStyle(fontSize: 15),
+                //     ),
+                //     Text(
+                //       "$discount\$",
+                //       style: TextStyle(fontSize: 15),
+                //     ),
+                //   ],
+                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

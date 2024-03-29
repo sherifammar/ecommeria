@@ -22,10 +22,12 @@ class Cart extends StatelessWidget {
         bottomNavigationBar: GetBuilder<CartController>(
             builder: (controller) => CustomBottomNvbar(
                   price: '${cartcontroller.priceorder}!',
-                  discount: '${controller.discountcoupon}',
-                  totalprice: '${controller.getTotalPrice()}!',
+                  // discount: '${controller.discountcoupon}',
+                  // totalprice: '${controller.getTotalWithdeliveryPrice()}!', //السعر الكلى مضاف اليه التوصيل
+                  totalprice: '${controller.getTotalPrice()}!',// السعر بدون التوصيل 
                   controllercoupon: controller.controllercoupon!,
-                  shipping: '10',
+                  // shipping: controller.deliveryPrice!,// اضافه السعر من الخريطه
+                  shipping: "0",// شكل كام عند وائل 
                   onApplycoupon: () {
                     controller.couponView();
                   },

@@ -1,4 +1,6 @@
 // import 'dart:html';
+import 'package:ecommeria/core/function/delivertprice.dart';
+import 'package:ecommeria/data/datasourse/remote/home_data.dart';
 import 'package:ecommeria/data/model/cartmodel.dart';
 import 'package:ecommeria/data/model/couponmodel.dart';
 
@@ -7,14 +9,70 @@ import 'package:get/get.dart';
 
 import '../core/class/StatusRequest.dart';
 import '../core/constant/nameroutes.dart';
+import '../core/function/deliverytime.dart';
 import '../core/function/handlingdatacontroller.dart';
 import '../core/services/servives.dart';
 import '../data/datasourse/remote/cart_data.dart';
+import 'home_controller.dart';
 
 class CartController extends GetxController {
   CartData cartdata = CartData(Get.find()); // connect to data
   late StatusRequest statusRequest;
   Myservices myservices = Get.find();
+
+  //=================================لاضافه  وقت التوصيل و سعر التوصيل 
+ HomeData hometdata = HomeData(Get.find());
+  String? timearrive = "";
+  String? deliveryPrice;
+   List setting = [];
+   String settingDelivery = "";
+   getdata() async {
+    statusRequest = StatusRequest.loading; // for  loading
+    var response = await hometdata
+        .getData(); // getData for test_data page == it post data to url test
+
+    print("**************** $response");
+    statusRequest = handdlingData(
+        response); // it give statusrequest error or statusrequest sucess
+
+    if (StatusRequest.success == statusRequest) {
+      if (response['status'] == "success") {
+        
+        setting.addAll(response['setting']);
+        //=============
+               //=================== for wael course
+        settingDelivery = setting[0]["setting_deliverytime"]; // for wael course
+        myservices.sharedPreferences.setString('delivery', settingDelivery);
+        // =================================== اضاف وقت وصول الطلب و السعر 
+        timearrive = await deliveryTime(
+                double.parse(setting[0]["setting_startlat"]),
+                double.parse(setting[0]["setting_long"]),
+                int.parse(setting[0]["setting_speed"]))
+            .toString();
+        print(" =================time home page=================");
+        print(timearrive);
+
+        deliveryPrice = priceOfdelivery(
+                double.parse(setting[0]["setting_startlat"]),
+                double.parse(setting[0]["setting_long"]),
+                int.parse(setting[0]["setting_pricepekilo"]))
+            .toString();
+        print(deliveryPrice);
+      } else {
+        statusRequest = StatusRequest.failure;
+      }
+    }
+
+    update(); // update ui
+  }
+
+getTotalWithdeliveryPrice() {
+  int shipingprice = int.parse(deliveryPrice!);
+    return (priceorder + shipingprice   - priceorder * discountcoupon! / 100);
+  }
+
+
+  //=============================
 
   List<CartModel> data = [];
   double priceorder = 0.0;
@@ -120,7 +178,7 @@ class CartController extends GetxController {
   }
 
   getTotalPrice() {
-    return (priceorder - priceorder * discountcoupon! / 100);
+    return (priceorder  - priceorder * discountcoupon! / 100);
   }
 
   couponView() async {
@@ -176,6 +234,7 @@ class CartController extends GetxController {
   void onInit() {
     controllercoupon = TextEditingController();
     getcartview();
+    getdata();
     super.onInit();
   }
 }
