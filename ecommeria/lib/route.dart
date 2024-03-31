@@ -79,7 +79,7 @@ GetPage(name:    AppRoutes.checkout, page: ()=>const Checkout()),
 // ================ orders ===========
 
 GetPage(name:    AppRoutes.orderspending, page: ()=>const Orderspending()),
-GetPage(name:    AppRoutes.archive, page: ()=>const Archive()),
+GetPage(name:    AppRoutes.archive, page: ()=>const OrdersArchiveView()),
 GetPage(name:    AppRoutes.ordersdetail, page: ()=>const OrdersDetail()),
  GetPage(name: AppRoutes.orderstracking, page: () => const Tracking()),
 

@@ -16,7 +16,7 @@ class OrderPendingController extends GetxController {
 List<OrdersModel> archivedata = []; // to save data from response
 
   late StatusRequest statusRequest;
-  Archive archive = Archive(Get.find());
+  // Archive archive = Archive(Get.find());
   
   OrdersPending ordersPending = OrdersPending(Get.find());
   Myservices myservices = Get.find();

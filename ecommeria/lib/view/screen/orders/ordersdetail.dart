@@ -113,22 +113,22 @@ class OrdersDetail extends StatelessWidget {
                         ),
                       ),
                     ),
-                  if (controller.ordersmodels.ordersType == "0")
-                    Container(
-                      height: 100,
-                      width: double.infinity,
-                      child: Expanded(
-                        child: GoogleMap(
-                          mapType: MapType.normal,
-                          markers: controller.makers.toSet(),
-                          initialCameraPosition: controller.kGooglePlex!,
-                          onMapCreated: (GoogleMapController controllermap) {
-                            controller.completecontroller
-                                .complete(controllermap);
-                          },
-                        ),
-                      ),
-                    )
+                  // if (controller.ordersmodels.ordersType == "0")
+                  //   Container(
+                  //     height: 100,
+                  //     width: double.infinity,
+                  //     child: Expanded(
+                  //       child: GoogleMap(
+                  //         mapType: MapType.normal,
+                  //         markers: controller.makers.toSet(),
+                  //         initialCameraPosition: controller.kGooglePlex!,
+                  //         onMapCreated: (GoogleMapController controllermap) {
+                  //           controller.completecontroller
+                  //               .complete(controllermap);
+                  //         },
+                  //       ),
+                  //     ),
+                  //   )
                 ],
               ),
             )),

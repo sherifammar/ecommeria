@@ -28,8 +28,11 @@ class CardlistOrders extends GetView<OrderPendingController> {
                   "Order Price : ${ordersModel.ordersTotalprice}",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                // Text(Jiffy('${ordersModel.ordersDatetime}', "yy-MM-dd").fromNow(),
-                // style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                const SizedBox(
+                  width: 60,
+                ),
+                Text(Jiffy('${ordersModel.ordersDate}', "yy-MM-dd").fromNow(),
+                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
               ],
             ),
             SizedBox(
@@ -73,16 +76,19 @@ class CardlistOrders extends GetView<OrderPendingController> {
                 //   color: Colors.red,
                 // ),
                 const SizedBox(
-                  width: 3,
+                  width: 5,
                 ),
-                // MaterialButton(
-                //   onPressed: () {
-                //     Get.toNamed("/orderdetail",
-                //         arguments: {"ordersmodel": ordersModel});
-                //   },
-                //   child: Text("Detail"),
-                //   color: Colors.red,
-                // ),
+                MaterialButton(
+                  onPressed: () {
+                    Get.toNamed("/orderdetail",
+                        arguments: {"ordersmodel": ordersModel});
+                  },
+                  child: Text("Detail"),
+                  color: Colors.red,
+                ),
+                 const SizedBox(
+                  width: 6,
+                ),
                    if(ordersModel.ordersRating == "0")
                 MaterialButton(
                   onPressed: () {

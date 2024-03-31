@@ -133,7 +133,7 @@ class ChechoutController extends GetxController {
   }
 payCard(){
   choosePaymentmethod("1");
-  PaymentManager.makePayment(int.parse(orderprice), "EGP");
+  PaymentManager.makePayment(double.parse(orderprice).toInt(), "EGP");
 }
   @override
   void onInit() {
