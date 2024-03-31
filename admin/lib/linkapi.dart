@@ -58,5 +58,7 @@ static const String itemsview = "$server/items/view.php";
 static const String additems = "$server/items/add.php";
 static const String editeitems = "$server/items/edite.php";
 static const String deletitems="$server/items/delet.php";
+// ================== setting
+static const String setting="$server/setting/setting.php";
 
 }

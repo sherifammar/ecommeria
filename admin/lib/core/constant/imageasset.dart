@@ -39,6 +39,6 @@ class ImageAsset {
     static const String users = "asset/image/user-97890_640.png";
     static const String approveusers = "asset/image/group-117192_640.png";
      static const String deliveryboy = "asset/image/box-2687558_640.png";
-     
+      static const String setting = "asset/image/—Pngtree—settings glyph black icon_3755352.png";
        static const String exit = "asset/image/exit-1295304_640.png";
 }

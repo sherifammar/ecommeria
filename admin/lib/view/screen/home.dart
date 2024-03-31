@@ -77,6 +77,13 @@ class Homepage extends StatelessWidget {
                   Get.toNamed(AppRoutes.deliverysetting);
                 },
               ),
+               Cardadmin(
+                texttitle: 'setting',
+                imageasset: ImageAsset.setting,
+                onpress: () {
+                  Get.toNamed(AppRoutes.addaddress);
+                },
+              ),
               Cardadmin(
                   texttitle: 'exit',
                   imageasset: ImageAsset.exit,

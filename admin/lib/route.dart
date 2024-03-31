@@ -1,4 +1,5 @@
 
+import 'package:admin/view/screen/addaddress.dart';
 import 'package:admin/view/screen/auth/forgetpassword/forgetpassword.dart';
 import 'package:admin/view/screen/auth/forgetpassword/resetpassword.dart';
 import 'package:admin/view/screen/auth/forgetpassword/scucess_resetpassword.dart';
@@ -23,6 +24,7 @@ import 'package:admin/view/screen/orders/ordersscreen.dart';
 import 'package:admin/view/screen/orders/ordersdetail.dart';
 import 'package:admin/view/screen/orders/orderspending.dart';
 import 'package:admin/view/screen/orders/reporting.dart';
+import 'package:admin/view/screen/setting.dart';
 import 'package:admin/view/screen/users/approveusers.dart';
 import 'package:admin/view/screen/users/maxusers.dart';
 import 'package:admin/view/screen/users/userssetting.dart';
@@ -86,6 +88,9 @@ GetPage(name: AppRoutes.reporting, page: () => const ReportScreen()),
   GetPage(name: AppRoutes.maxdelivery, page: () => const Maxdelivery()),
   GetPage(name: AppRoutes.unapprovedelivery, page: () => const UnapproveDelivery()),
   GetPage(name: AppRoutes.message, page: () => const Messagesending()),
+  //==================
+      GetPage(name: AppRoutes.setting, page: () => const Settingadd()),
+     GetPage(name: AppRoutes.addaddress, page: () => const AddAddress()),
 ];
 
 

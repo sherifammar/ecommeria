@@ -19,7 +19,7 @@ static const String verifycode_sginup = "/verifycode_signup";
       static const String cart = "/cart";
 
       static const String addressview = "/addressview";
-       static const String addaddress = "/addaddress";
+      //  static const String addaddress = "/addaddress";
         static const String detailaddress = "/detailaddress";
         static const String editeaddress = "/editeaddress";
 
@@ -59,4 +59,7 @@ static const String maxdelivery = "/maxdelivery";
 static const String unapprovedelivery = "/unapprovedelivery";
 // ============ message 
 static const String message = "/message";
+
+static const String addaddress = "/addaddress";
+static const String setting = "/setting";
 }
