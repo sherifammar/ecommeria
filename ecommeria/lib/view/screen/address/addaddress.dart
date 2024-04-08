@@ -26,7 +26,8 @@ class AddAddress extends StatelessWidget {
                 widget: Stack(alignment: Alignment.center, children: [
                   if (addcontroller.kGooglePlex != null)
                     Expanded(
-                      child: GoogleMap(
+                      child:
+                       GoogleMap(
                         mapType: MapType.normal,
                         markers: addController.makers.toSet(),
                         onTap: (latlng) {
