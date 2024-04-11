@@ -30,4 +30,57 @@ class SettingController extends GetxController {
                 );
     
   }
+//===========================
+  bool isSwitchnotification = false;
+  String? username;
+  String? note;
+  checkNotification(bool valuenoyification) {
+    if (valuenoyification == true) {
+      String userid = myservices.sharedPreferences.getString("id")!;
+      myservices.sharedPreferences.setString("notification", "okey");
+      note = myservices.sharedPreferences.getString("notification");
+      FirebaseMessaging.instance
+          .subscribeToTopic("users"); //send notification all users
+      FirebaseMessaging.instance.subscribeToTopic('users${userid}');
+
+      isSwitchnotification = valuenoyification;
+      print("/// ok notification /////////");
+      update();
+    } else {
+      String userid = myservices.sharedPreferences.getString("id")!;
+      FirebaseMessaging.instance.unsubscribeFromTopic(
+          "users"); // can not send notification all users after log out
+      FirebaseMessaging.instance.unsubscribeFromTopic('users${userid}');
+      myservices.sharedPreferences.setString("notification", "no");
+      note = myservices.sharedPreferences.getString("notification");
+      print("/// delet  **notification /////////");
+      isSwitchnotification = false;
+      update();
+    }
+  }
+
+  selectNotification() {
+    if (myservices.sharedPreferences.getString("notification") == "okey") {
+      note = myservices.sharedPreferences.getString("notification");
+      isSwitchnotification = true;
+    } else {
+      isSwitchnotification = false;
+
+    }
+  }
+
+  @override
+  void onInit() {
+    username = myservices.sharedPreferences.getString("username")!;
+
+    note = myservices.sharedPreferences.getString("notification");
+    print(myservices.sharedPreferences.getString("notification"));
+
+    //==========================
+
+    selectNotification();
+
+    super.onInit();
+  }
+
 }

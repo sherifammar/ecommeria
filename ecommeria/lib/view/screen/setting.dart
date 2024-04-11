@@ -17,7 +17,8 @@ class Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SettingController controller = Get.put(SettingController());
-    return Container(
+    return 
+    GetBuilder<SettingController>(builder: (controller) =>    Container(
       child: ListView(
         children: [
           Stack(
@@ -45,28 +46,14 @@ class Setting extends StatelessWidget {
             child: Card(
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 ListTile(
-                  onTap: () {},
-                  title: Text("Disable notification"),
-                  trailing: Switch(
-                      value: true,
-                      onChanged: (value) {
-                        // Myservices myservices = Get.find();
-                        // String userid =
-                        //     myservices.sharedPreferences.getString("id")!;
-                        // FirebaseMessaging.instance
-                        //     .unsubscribeFromTopic('users${userid}');
-
-                        
-                // if (Get.isDarkMode) {
-                  
-                //   Get.changeTheme(themeEnglish.light());
-                // } else {
-                //   Get.changeTheme(themeEnglish.dark());
-                // }
-              
-                      }
-                      ),
-                ),
+                            title: const Text("Notification"),
+                            trailing: 
+                            Switch(
+                                value: controller.isSwitchnotification,
+                                activeColor: Colors.blue,
+                                onChanged: (value) {
+                                  controller.checkNotification(value);
+                                })),
                 SizedBox(
                   height: 5,
                 ),
@@ -136,6 +123,7 @@ class Setting extends StatelessWidget {
           )
         ],
       ),
-    ); // can not use scafold +> using container is part of page
+    ));
+ // can not use scafold +> using container is part of page
   }
 }
