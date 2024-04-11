@@ -50,7 +50,7 @@ class Setting extends StatelessWidget {
                             trailing: 
                             Switch(
                                 value: controller.isSwitchnotification,
-                                activeColor: Colors.blue,
+                                activeColor: Colors.red,
                                 onChanged: (value) {
                                   controller.checkNotification(value);
                                 })),
