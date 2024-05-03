@@ -1,6 +1,3 @@
-
-
-
 import 'dart:io';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -9,16 +6,14 @@ import 'package:get/get.dart';
 import '../core/class/StatusRequest.dart';
 import 'package:flutter/material.dart';
 
-
 import '../core/function/handlingdatacontroller.dart';
 import '../core/services/servives.dart';
 import '../data/datasourse/remote/home_data.dart';
-
+import 'package:workmanager/workmanager.dart';
 
 abstract class HomeController extends GetxController {
   initialData();
   getdata();
-
 }
 
 class HomeControllerImp extends HomeController {
@@ -28,8 +23,6 @@ class HomeControllerImp extends HomeController {
   String? lang;
   late StatusRequest statusRequest;
 
- 
-
   // connect o data
   @override
   initialData() {
@@ -38,15 +31,15 @@ class HomeControllerImp extends HomeController {
     id = myservices.sharedPreferences.getString("id"); // save id of user
     lang = myservices.sharedPreferences
         .getString("lang"); // save lang for change desgin of  cart of home page
+   
   }
 
   HomeData hometdata = HomeData(Get.find());
   @override
   void onInit() {
     initialData();
-    // getdata();
+    getdata();
 
-    
     // send notification
     super.onInit();
   }
@@ -63,8 +56,6 @@ class HomeControllerImp extends HomeController {
 
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
-       
-       
       } else {
         statusRequest = StatusRequest.failure;
       }
@@ -73,34 +64,27 @@ class HomeControllerImp extends HomeController {
     update(); // update ui
   }
 
-
   logout() {
-    // ==== send notification 
+    // ==== send notification
     String userid = myservices.sharedPreferences.getString("id")!;
-    FirebaseMessaging.instance.unsubscribeFromTopic("admin"); // can not send notification all users after log out
-    FirebaseMessaging.instance.unsubscribeFromTopic('admin${userid}'); //can not send notification certain user only after log out
-   //     =========================
+    FirebaseMessaging.instance.unsubscribeFromTopic(
+        "admin"); // can not send notification all users after log out
+    FirebaseMessaging.instance.unsubscribeFromTopic(
+        'admin${userid}'); //can not send notification certain user only after log out
+    //     =========================
     myservices.sharedPreferences.clear();
-     Get.defaultDialog(
-                  title: "warn",
-                  titleStyle: TextStyle(fontWeight: FontWeight.bold),
-                  middleText: "Do You Want Exit from APP",
-                  // cancelTextColor: ColorAPP.primaryColor,
-                  // confirmTextColor: ColorAPP.primaryColor,
-                  onCancel: () {},
-                  onConfirm: () {
-                   exit(0);
-                  },
-                );
-    
+    Get.defaultDialog(
+      title: "warn",
+      titleStyle: TextStyle(fontWeight: FontWeight.bold),
+      middleText: "Do You Want Exit from APP",
+      // cancelTextColor: ColorAPP.primaryColor,
+      // confirmTextColor: ColorAPP.primaryColor,
+      onCancel: () {},
+      onConfirm: () {
+        exit(0);
+      },
+    );
   }
-
 }
 
 ///////////////////////// searchcontroller //////
-
-
-
-  
-
-

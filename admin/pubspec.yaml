@@ -88,6 +88,8 @@ dependencies:
   file_picker: ^4.6.1
   drop_down_list: ^0.0.4
   fl_chart: ^0.55.2
+  workmanager: ^0.5.1
+  # workmanager: ^0.5.1
 
 dev_dependencies:
   flutter_test:
@@ -130,18 +132,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Cairo
-      fonts:
-       - asset: asset/fonts/Cairo/Cairo-Regular.ttf
-       - asset: asset/fonts/Cairo/Cairo-Bold.ttf
-         weight: 700
-
-    - family: PlayfairDisplay
-      fonts:
-       - asset: asset/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf
-       - asset: asset/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf
-         weight: 700
+  
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

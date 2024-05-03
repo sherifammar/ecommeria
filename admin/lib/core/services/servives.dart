@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:workmanager/workmanager.dart';
 
 class Myservices extends GetxService {
   // using get service
@@ -11,12 +12,14 @@ class Myservices extends GetxService {
     await Firebase.initializeApp(); // start at init
     sharedPreferences =
         await SharedPreferences.getInstance(); // make shareperefnce
+        
     return this; // return init method
   }
 } // end of class myservice
 
 inititalServices() async {
   await Get.putAsync(() => Myservices().init());
+  
   // using putasyn due to asyn and await
   // inject myservice  method
 }

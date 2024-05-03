@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 import '../constant/apptheme.dart';
 import '../function/fmc.dart';
 import '../services/servives.dart';
+import 'package:workmanager/workmanager.dart';
+
+
 
 class Localcontroller extends GetxController {
   Locale? langauge;
@@ -38,6 +41,7 @@ class Localcontroller extends GetxController {
     }
     // requestPermissionNotification(); // prermission of notification
     // fMc(); // send notification of firebase
+
     super.onInit();
   }
 }
