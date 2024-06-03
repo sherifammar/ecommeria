@@ -26,7 +26,7 @@ class CustomTextformglobal extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscureText == null || obscureText == false ? false : true,
-
+maxLines: 2,
       keyboardType: isNumber
           ? TextInputType.numberWithOptions(decimal: true)
           : TextInputType.text,
