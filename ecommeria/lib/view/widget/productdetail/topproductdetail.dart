@@ -79,6 +79,7 @@ class TopproductDetail extends GetView<ProductDetailcontrollerImp> {
             ),
             Text(
               "${controller.itemsModel.itemsDesc}",
+              maxLines: 2,
               style: Theme.of(context).textTheme.bodyText1,
             ),
              

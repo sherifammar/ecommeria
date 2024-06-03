@@ -42,7 +42,7 @@ class CustomRatingitemsdetail extends GetView<AllratingDetailController> {
     
                 Text(allRatingitemsmodel.ratingitemsComment, // ${itemmodels.itemdesc}
                     textAlign: TextAlign
-                        .center), // make text in center, error =>not using style
+                        .center,maxLines: 3), // make text in center, error =>not using style
                 Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

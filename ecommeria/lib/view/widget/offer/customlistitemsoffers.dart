@@ -57,7 +57,8 @@ class CustomListItemsoffers extends GetView<OffersController> {
           
                   Text(itemsmodel.itemsDesc!, // ${itemmodels.itemdesc}
                       textAlign: TextAlign
-                          .center), // make text in center, error =>not using style
+                          .center
+                          ,maxLines: 2,), // make text in center, error =>not using style
                    Expanded(
                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

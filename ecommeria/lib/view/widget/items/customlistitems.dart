@@ -59,7 +59,7 @@ class CustomListItems extends GetView<ItemscontrollerImp> {
                 ),
 
                 Text(itemsmodel.itemsDesc!, // ${itemmodels.itemdesc}
-                    textAlign: TextAlign.center),
+                    textAlign: TextAlign.center, maxLines: 2,),
                 Text('Delivery time : ${controller.timearrive}',
                     //  'Delivery time : ${controller. myservices.sharedPreferences.getString('timeofdelivery')}',
                     // it com from homecontroller
