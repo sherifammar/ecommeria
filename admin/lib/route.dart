@@ -18,6 +18,7 @@ import 'package:admin/view/screen/home.dart';
 import 'package:admin/view/screen/items/itemsadd.dart';
 import 'package:admin/view/screen/items/itemsedite.dart';
 import 'package:admin/view/screen/items/itemsview.dart';
+import 'package:admin/view/screen/langauge.dart';
 import 'package:admin/view/screen/message.dart';
 import 'package:admin/view/screen/orders/archive.dart';
 import 'package:admin/view/screen/orders/ordersscreen.dart';
@@ -36,7 +37,7 @@ import 'data/datasourse/remote/orders/archive_data.dart';
 
 List<GetPage<dynamic>>? routes = [
 // GetPage(name:  "/", page: ()=>const Login()),
-  GetPage(name: "/", page: () => const Login(), middlewares: [MyMiddleWare()]),
+  GetPage(name: "/", page: ()=>const Language(), middlewares: [MyMiddleWare()]),
 // ,middlewares: [MyMiddleWare()]
 
 /////////////////////////////////////////////////
@@ -46,7 +47,7 @@ List<GetPage<dynamic>>? routes = [
 //  GetPage(name:  "/", page: ()=>const Testview()),
   ////////////////////////////////////////////////////////
 
-// GetPage(name:  AppRoutes.login, page: ()=>const Login()),
+GetPage(name:  AppRoutes.login, page: ()=>const Login()),
 
   GetPage(name: AppRoutes.sginup, page: () => const Sginup()),
   GetPage(name: AppRoutes.forgetpassword, page: () => ForgetPasswprd()),

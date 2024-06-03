@@ -6,7 +6,9 @@ import 'package:get/get.dart';
 import '../core/class/StatusRequest.dart';
 import 'package:flutter/material.dart';
 
+
 import '../core/function/handlingdatacontroller.dart';
+
 import '../core/services/servives.dart';
 import '../data/datasourse/remote/home_data.dart';
 import 'package:workmanager/workmanager.dart';
@@ -31,7 +33,7 @@ class HomeControllerImp extends HomeController {
     id = myservices.sharedPreferences.getString("id"); // save id of user
     lang = myservices.sharedPreferences
         .getString("lang"); // save lang for change desgin of  cart of home page
-   
+  
   }
 
   HomeData hometdata = HomeData(Get.find());
