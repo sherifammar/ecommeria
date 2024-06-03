@@ -94,7 +94,7 @@ class CardlistOrders extends GetView<OrderPendingController> {
                   onPressed: () {
                    controller.goTotracking(ordersModel);
                   },
-                  child: Text("Tracking of delivery"),
+                  child: const Text("Tracking of delivery"),
                   color: Colors.red,
                 ),
                
