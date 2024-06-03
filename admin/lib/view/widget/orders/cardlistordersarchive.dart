@@ -27,8 +27,8 @@ class CardlistOrdersarchive extends GetView<OrderPendingController> {
                   "Order Price : ${ordersModel.ordersTotalprice}",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                // Text(Jiffy('${ordersModel.ordersDatetime}', "yy-MM-dd").fromNow(),
-                // style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                Text(Jiffy('${ordersModel.ordersDate}', "yy-MM-dd").fromNow(),
+                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
               ],
             ),
             SizedBox(
