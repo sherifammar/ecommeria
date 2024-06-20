@@ -62,4 +62,7 @@ static const String message = "/message";
 
 static const String addaddress = "/addaddress";
 static const String setting = "/setting";
+
+static const String coupon = "/coupon";
+static const String points = "/points";
 }

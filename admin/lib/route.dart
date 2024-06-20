@@ -11,6 +11,7 @@ import 'package:admin/view/screen/auth/verifycode_signup.dart';
 import 'package:admin/view/screen/categories/addcatogeries.dart';
 import 'package:admin/view/screen/categories/categories.dart';
 import 'package:admin/view/screen/categories/editecatogeries.dart';
+import 'package:admin/view/screen/coupon.dart';
 import 'package:admin/view/screen/delivery/approvedelivery.dart';
 import 'package:admin/view/screen/delivery/deliverysetting.dart';
 import 'package:admin/view/screen/delivery/maxdelivery.dart';
@@ -92,6 +93,8 @@ GetPage(name: AppRoutes.reporting, page: () => const ReportScreen()),
   //==================
       GetPage(name: AppRoutes.setting, page: () => const Settingadd()),
      GetPage(name: AppRoutes.addaddress, page: () => const AddAddress()),
+           GetPage(name: AppRoutes.coupon, page: () => const Coupon()),
+      //  GetPage(name: AppRoutes.points, page: () => const Points()),
 ];
 
 

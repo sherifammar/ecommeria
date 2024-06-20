@@ -84,6 +84,21 @@ class Homepage extends StatelessWidget {
                   Get.toNamed(AppRoutes.addaddress);
                 },
               ),
+                   Cardadmin(
+                texttitle: 'points',
+                imageasset: ImageAsset.onboardingimagefour,
+                onpress: () {
+                  Get.toNamed(AppRoutes.points);
+                },
+              ),
+                Cardadmin(
+                texttitle: 'coupon',
+                imageasset: ImageAsset.logonsignin,
+                onpress: () {
+                  Get.toNamed(AppRoutes.coupon);
+                },
+              ),
+
               Cardadmin(
                   texttitle: 'exit',
                   imageasset: ImageAsset.exit,

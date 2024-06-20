@@ -61,4 +61,9 @@ static const String deletitems="$server/items/delet.php";
 // ================== setting
 static const String setting="$server/setting/setting.php";
 
+static const String pointsview = "$server/coupon/pointsview.php";
+static const String couponview = "$server/coupon/couponview.php";
+static const String editepoints = "$server/coupon/points.php";
+static const String editecoupon = "$server/coupon/coupon.php";
+
 }
