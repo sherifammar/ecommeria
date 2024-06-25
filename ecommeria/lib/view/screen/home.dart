@@ -41,7 +41,7 @@ class Homepage extends StatelessWidget {
                   mycontroller: controller.search!,
                   myonChanged: (val) {
                     controller.chechSearch(val); // for change of field of textfield
-                      controller.onSearchitems();
+                      // controller.onSearchitems();
                   },
                 ),
                 HandingDataView(

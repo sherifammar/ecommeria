@@ -125,6 +125,7 @@ class HomeControllerImp extends HomeController {
 class SearchController extends GetxController {
   TextEditingController? search;
   bool isSearch = false;
+  
   List<ItemsModel> listsearchItems = [];
   late StatusRequest statusRequest;
   String? timearrive;
