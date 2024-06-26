@@ -22,11 +22,12 @@ class Offers extends StatelessWidget {
    
 
     return GetBuilder<OffersController>(
-        builder: (controller) => 
-        Column(children: [
-              Expanded(
-                flex: 1,
-                child: CustomAppBar(
+        builder: (controller) => Container(child: ListView(
+          shrinkWrap: true,
+          children: [
+           const SizedBox(height: 10),
+            
+            CustomAppBar(
                   titleappbar: "Find Product",
                  
                   onPressedSearch: () {
@@ -40,14 +41,13 @@ class Offers extends StatelessWidget {
                     controller.chechSearch(val);
                   },
                 ),
-              ),
+              
               !controller.isSearch
-                  ? Expanded(
-                    flex: 4,
-                      child: HandingDataView(
+                  ?  HandingDataView(
                           statusRequest: controller.statusRequest,
                           widget: Container(
                               child: ListView.builder(
+                                shrinkWrap: true,
                                   padding: EdgeInsets.all(10),
                                   itemCount: controller.data.length,
                                   itemBuilder: (context, i) {
@@ -92,12 +92,15 @@ class Offers extends StatelessWidget {
                                   })
                                   )
                                   )
-                                  )
+                                  
                   : ListitemsSearch(
                       searchItems: controller
                           .listsearchItems, // get data from listsearchitem
-                    )
-            ])
+                    )],)
+       
+                               
+                 
+            
 
         //  =================================================
         // Expanded(
@@ -117,6 +120,6 @@ class Offers extends StatelessWidget {
         // );
         // ==============================================================
 
-        );
+        ));
   }
 }
