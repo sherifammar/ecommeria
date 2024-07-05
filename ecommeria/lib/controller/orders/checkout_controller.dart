@@ -33,6 +33,7 @@ class ChechoutController extends GetxController {
   String? checkDelivery;
   String checkAddress = "0";
   String? priceshiping;
+    String? couponnamedata;
 
   choosePaymentmethod(String val) {
     checkPayment = val;
@@ -104,7 +105,8 @@ class ChechoutController extends GetxController {
         "ordersprice": orderprice,
         "orderscoupon": couponid,
         "coupondiscount": discountcoupon.toString(),
-        "orderspaymentmethod": checkPayment.toString()
+        "orderspaymentmethod": checkPayment.toString(),
+         "couponrecordercouponname":couponnamedata.toString()
       };
       var response = await checkoutdata.checkout(data);
 
@@ -141,6 +143,8 @@ payCard(){
     couponid = Get.arguments["couponid"];
     discountcoupon = Get.arguments["discountcoupon"].toString();
     priceshiping= Get.arguments["shiping"];
+     couponnamedata=Get.arguments["couponnamecart"];
+    print("couponnamecart =====================>>>>${couponnamedata}");
     getAddressview();
     super.onInit();
   }

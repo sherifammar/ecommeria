@@ -236,7 +236,8 @@ getTotalConstdeliveryPrice() {
         "couponid": couponid ?? "0",
         "priceorder": priceorder.toString(),
         "discountcoupon": discountcoupon.toString(),
-        "shiping":deliveryPrice.toString()
+        "shiping":deliveryPrice.toString(),
+         "couponnamecart":couponname, // solved transfer coupn name to solved coupon problem
       });
     }
   }
