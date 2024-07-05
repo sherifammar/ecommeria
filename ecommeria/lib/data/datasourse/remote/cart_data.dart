@@ -44,12 +44,17 @@ class CartData {
   }
 
 //============================
-  coupon(String couponname) async {
-    var response = await crud.postData(AppLink.coupon, {"couponname": couponname});
+  // coupon(String couponname) async {
+  //   var response = await crud.postData(AppLink.coupon, {"couponname": couponname});
+  
+  //   return response.fold((l) => l, (r) => r); // error => l not 1
+  // }
+  //====================new version 
+  coupon(String couponname ,String usersid) async {
+    var response = await crud.postData(AppLink.coupon, {"couponname": couponname,"usersid":usersid});
   
     return response.fold((l) => l, (r) => r); // error => l not 1
   }
-  
 // ==============================================
  
 }

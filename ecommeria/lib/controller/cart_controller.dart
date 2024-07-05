@@ -191,6 +191,41 @@ getTotalConstdeliveryPrice() {
     return (priceorder  - priceorder * discountcoupon! / 100);
   }
 
+//   couponView() async {
+//     statusRequest = StatusRequest.loading;
+   
+
+//     discountcoupon = 0;
+//     update();
+
+//     var response = await cartdata.coupon(controllercoupon!.text);
+
+//     print("=====================  $response");
+//     statusRequest = handdlingData(
+//         response); // it give statusrequest error or statusrequest sucess
+
+//     if (StatusRequest.success == statusRequest) {
+//       if (response['status'] == "success") {
+//         Map<String, dynamic> couponList = response["data"];
+// // convert map to model
+//         couponmodel = CouponModel.fromJson(couponList);
+//         discountcoupon = int.parse(couponmodel!.couponDiscount!);
+//         couponname = couponmodel!.couponName;
+//         couponid = couponmodel!.couponId;
+
+//         print(data);
+//         print("copoun");
+//       }
+//     } else {
+//       // statusRequest = StatusRequest.failure;
+//       discountcoupon = 0;
+//       couponname = null;
+//       couponid = null;
+//       Get.snackbar("warm", "coupon invalid");
+//     }
+//     update();
+//   }
+//========================new version ===========
   couponView() async {
     statusRequest = StatusRequest.loading;
    
@@ -198,7 +233,8 @@ getTotalConstdeliveryPrice() {
     discountcoupon = 0;
     update();
 
-    var response = await cartdata.coupon(controllercoupon!.text);
+    // getData for test_data page == it post data to url test
+    var response = await cartdata.coupon(controllercoupon!.text , myservices.sharedPreferences.getString("id")!);
 
     print("=====================  $response");
     statusRequest = handdlingData(
@@ -225,7 +261,6 @@ getTotalConstdeliveryPrice() {
     }
     update();
   }
-
   goTocheckout() {
     if (data.isEmpty) {// data of reguest dataprice , dataview
       print(data);
