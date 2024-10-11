@@ -1,5 +1,5 @@
 class AppLink {
-  static const String server = "http://192.168.1.240/ecommeria/delivery";
+  static const String server = "http://192.168.1.2/ecommeria/delivery";
 
   static const String test = "$server/test.php";
 
@@ -8,6 +8,7 @@ class AppLink {
   static const String login = "$server/aurh delivery/login.php";
   static const String signup = "$server/aurh delivery/signup.php";
   static const String VerfiyCodeSignup = "$server/aurh delivery/resendverfiycode.php";
+   static const String VerfiyCode_Signup = "$server/aurh delivery/verfiycode.php";
 
   // ======= forgetpassword=====//
 
