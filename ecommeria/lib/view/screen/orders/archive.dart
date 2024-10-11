@@ -51,11 +51,15 @@ class OrdersArchiveView extends StatelessWidget {
         body: Container(
           padding:const  EdgeInsets.all(10),
           child: GetBuilder<OrdersArchiveController>(
-              builder: ((controller) => HandingDataView(statusRequest: controller.statusRequest, widget: ListView.builder(
+              builder: ((controller) => HandingDataView(statusRequest: controller.statusRequest, widget:
+               ListView.builder(
                     itemCount: controller.archiveData .length,
                     itemBuilder: ((context, index) =>
                         CardOrdersListArchive(listdata: controller.archiveData [index])),
-                  )))),
+                  )
+                  )
+                  )
+                  ),
         ));
   }
 }
