@@ -8,7 +8,7 @@ class VerfiyCodeSignupData {
   postData( String email, String Verifycode) async {
     // this method give l or r only
 
-    var response = await crud.postData("${AppLink.verfiycode}", 
+    var response = await crud.postData("${AppLink.VerfiyCode_Signup}", 
     {
       
       "email" : email , 
