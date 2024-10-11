@@ -15,7 +15,8 @@ class Itemsview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ItemsViewcontroller controller = Get.put(ItemsViewcontroller());
-    return Scaffold(
+    return 
+    Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             controller.goToadditems();
@@ -126,6 +127,8 @@ class Itemsview extends StatelessWidget {
                                   ),
                                 );
                               }))),
-                )));
+                )
+                )
+                );
   }
 }

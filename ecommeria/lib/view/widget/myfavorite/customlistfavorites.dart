@@ -51,7 +51,8 @@ class CustomListFavorite extends GetView<MyFavoriteViewController> {
               Expanded(
                 child: Hero(
                   tag: "${favoritemodel.itemsId}",
-                  child: CachedNetworkImage(
+                  child:
+                   CachedNetworkImage(
                       height: 250,
                       fit: BoxFit.fill,
                       imageUrl:

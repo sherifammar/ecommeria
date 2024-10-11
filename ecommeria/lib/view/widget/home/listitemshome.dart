@@ -18,8 +18,8 @@ class ListItemsHome extends GetView<HomeControllerImp> {
           scrollDirection: Axis.horizontal, // to scroll as row
           itemBuilder: (context, i) {
             return ItemsHome(
-                itemsModel: ItemsModel.fromJson(controller.items[
-                    i])); // item is list from controller .. itemsmodel is var used to save data
+                itemsModel: ItemsModel.fromJson(controller.items[i])
+                ); // item is list from controller .. itemsmodel is var used to save data
           }),
     );
   }

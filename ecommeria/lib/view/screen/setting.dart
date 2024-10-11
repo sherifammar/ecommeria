@@ -40,7 +40,7 @@ class Setting extends StatelessWidget {
                       ),
                     )),
               ]),
-          SizedBox(height: 55),
+         const SizedBox(height: 55),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Card(

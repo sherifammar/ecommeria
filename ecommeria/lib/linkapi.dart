@@ -1,5 +1,5 @@
 class AppLink {
-  static const String server = "http://192.168.1.240/ecommeria";
+  static const String server = "http://192.168.1.2/ecommeria";
 
   static const String test = "$server/test.php";
 
@@ -8,6 +8,7 @@ class AppLink {
   static const String login = "$server/aurh/login.php";
   static const String signup = "$server/aurh/signup.php";
   static const String VerfiyCodeSignup = "$server/aurh/resendverfiycode.php";
+    static const String Verfiy_CodeSignup = "$server/aurh/verfiycode.php";
   // ================ firrbase
   static const String firebaseauth = "$server/aurh/firebaseauth.php";
   static const String firebasesignup = "$server/aurh/firebasesign.php";
