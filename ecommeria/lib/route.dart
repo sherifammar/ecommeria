@@ -30,6 +30,7 @@ import 'package:ecommeria/view/screen/orders/orderspending.dart';
 import 'package:ecommeria/view/screen/orders/tracking.dart';
 import 'package:ecommeria/view/screen/productdetail.dart';
 import 'package:ecommeria/view/screen/ratingitemsdetail.dart';
+import 'package:ecommeria/view/screen/splashscreen/splachscreen.dart';
 import 'package:ecommeria/view/widget/productdetail/augment.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
@@ -38,6 +39,8 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 
 List<GetPage<dynamic>>? routes= [
 // GetPage(name:  "/", page: ()=>const Language()),
+// GetPage(name:  "/", page: ()=> SplashScreen() ,middlewares: [MyMiddleWare()]),
+//---------------- splash screen
 GetPage(name:  "/", page: ()=>const Language() ,middlewares: [MyMiddleWare()]),
 
 // ,middlewares: [MyMiddleWare()]
@@ -47,8 +50,9 @@ GetPage(name:  "/", page: ()=>const Language() ,middlewares: [MyMiddleWare()]),
 // GetPage(name:  "/", page: ()=>const Language() ),
 // GetPage(name:  "/", page: ()=>const Cart()),
 //  GetPage(name:  "/", page: ()=>const Testview()),
- ////////////////////////////////////////////////////////
-
+//  //////////////////////////////////////////////////////// 
+// GetPage(name:  AppRoutes.language, page: ()=>const Language()),
+//=========================
 GetPage(name:  AppRoutes.login, page: ()=>const Login()),
 GetPage(name:  AppRoutes.OnBoarding, page: ()=>const OnBoarding()),
 GetPage(name:  AppRoutes.sginup, page: ()=>const Sginup()),

@@ -85,10 +85,11 @@ dependencies:
   model_viewer_plus: ^1.5.1
   flutter_ringtone_player: ^3.2.0
   rating_dialog: ^2.0.4
-  file_picker: ^4.6.1
+  file_picker: 
   drop_down_list: ^0.0.4
   fl_chart: ^0.55.2
   workmanager: ^0.5.1
+  permission_handler: ^11.0.1
   # workmanager: ^0.5.1
 
 dev_dependencies:

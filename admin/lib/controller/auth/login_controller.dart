@@ -7,6 +7,7 @@ import '../../core/class/StatusRequest.dart';
 import '../../core/constant/nameroutes.dart';
 
 import '../../core/function/handlingdatacontroller.dart';
+
 import '../../core/services/servives.dart';
 import '../../data/datasourse/remote/auth/login.dart';
 
@@ -111,6 +112,7 @@ class LogincontrollerImp extends Logincontroller {
 
     email = TextEditingController();
     password = TextEditingController();
+   
     super.onInit();
   }
 

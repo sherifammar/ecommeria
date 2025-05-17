@@ -24,7 +24,8 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
    HomeControllerImp controller = Get.put(HomeControllerImp());
     return GetBuilder<HomeControllerImp>(
-        builder: (controller) => Container(
+        builder: (controller) => 
+        Container(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: ListView(
               children: [

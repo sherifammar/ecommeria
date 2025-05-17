@@ -37,5 +37,7 @@ static const String verifycode_sginup = "/verifycode_signup";
  // ==================
 
  static const String ratingdetail = "/ratingdetail";
+ //=== splash test
+   // static const String language = "/language";
 
 }
