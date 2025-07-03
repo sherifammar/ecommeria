@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // connect to controller of language
       theme: maincontroller.appTheme,
+  locale: maincontroller.langauge,
       // home: const Test(),
       // home: const Language(),
       getPages: routes,
