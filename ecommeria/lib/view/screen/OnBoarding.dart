@@ -1,6 +1,7 @@
 import 'package:ecommeria/controller/onboarddotcontroller.dart';
 import 'package:ecommeria/core/constant/color.dart';
 import 'package:ecommeria/view/widget/onboarding/customebutton.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
