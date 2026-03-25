@@ -68,7 +68,7 @@ PolylinePoints polylinepoints = PolylinePoints(); // MAKE POINT TO DRAW LINE
 // }
 
 
-//========================النسخه الجديده من flutter polyline points 3.1.0
+//========================النسخه الجديده من flutter polyline points 3.1.0 **** سوف تلغى في المستقبل
 //==== for new version of flutter polyline points 3.1.0
 // import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
@@ -155,4 +155,48 @@ PolylinePoints polylinepoints = PolylinePoints(); // MAKE POINT TO DRAW LINE
 //   }
 
 //   return polylineset;
+// }
+
+
+//===== تعديل **claude ******  getpolyline to new version of flutter polyline points 3.1.0 التى سوف تستخدم في المستقبل
+
+// Future<Set<Polyline>> getPolylineMap(
+//     double devlat, double devlong, double custlat, double custlong) async {
+//   PolylinePoints polylinePoints = PolylinePoints(apiKey: AppConfig.googleMapsKey);
+//   Set<Polyline> polylineSet = {};
+
+//   try {
+//     RoutesApiRequest request = RoutesApiRequest(
+//       origin: PointLatLng(devlat, devlong),
+//       destination: PointLatLng(custlat, custlong),
+//       travelMode: TravelMode.driving,
+//       routingPreference: RoutingPreference.trafficAware,
+//     );
+
+//     RoutesApiResponse response = await polylinePoints
+//         .getRouteBetweenCoordinatesV2(request: request);
+
+//     if (response.routes.isNotEmpty) {
+//       Route route = response.routes.first;
+
+//       debugPrint('Duration: ${route.durationMinutes} min | Distance: ${route.distanceKm} km');
+
+//       List<LatLng> polylineCoordinates = (route.polylinePoints ?? [])
+//           .map((point) => LatLng(point.latitude, point.longitude))
+//           .toList();
+
+//       polylineSet.add(Polyline(
+//         polylineId: PolylineId("route_${DateTime.now().millisecondsSinceEpoch}"),
+//         color: Colors.blue,
+//         width: 5,
+//         points: polylineCoordinates,
+//       ));
+//     } else {
+//       debugPrint("No routes found");
+//     }
+//   } catch (e) {
+//     debugPrint("Error fetching polyline: $e");
+//   }
+
+//   return polylineSet;
 // }
