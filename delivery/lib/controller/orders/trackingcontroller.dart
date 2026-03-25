@@ -52,7 +52,13 @@ class Trackingcontroller extends GetxController {
             double.parse(ordersModel.addressLong!))));
 
     StreamSubscription<Position> positionStream =
-        Geolocator.getPositionStream().listen((Position? position) {
+        Geolocator.getPositionStream(
+          // locationSettings: LocationSettings(
+          //   accuracy: LocationAccuracy.high,
+          //   distanceFilter: 50, // update location every 50 meter
+          // )
+
+        ).listen((Position? position) {
       deliverylat = position!.latitude; // for delivery boy
       deliverylong = position.longitude;
       print("================== current delivery position ============");
