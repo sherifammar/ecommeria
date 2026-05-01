@@ -76,3 +76,125 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+//============تم اتعديل main.dart  لاضافة workmanager  1-5-2026- by  gemina 
+
+// import 'package:flutter/material.dart';
+// import 'package:workmanager/workmanager.dart';
+// import 'package:get/get.dart';
+
+// // 1. دالة المشغل (يجب أن تكون خارج أي كلاس)
+// @pragma('vm:entry-point')
+// void callbackDispatcher() {
+//   Workmanager().executeTask((task, inputData) async {
+//     try {
+//       print("****************  بجأت مهمة الخلفية: $task");
+
+//       // هام جداً: تهيئة التبعيات داخل الـ Isolate المنفصل
+//       // يجب وضع الكلاسات التي يحتاجها HomeData ليعمل
+//       Get.put(Crud()); 
+      
+//       HomeData hometdata = HomeData(Get.find());
+      
+//       // جلب البيانات
+//       var response = await hometdata.getData();
+//       print("**************** الاستجابة من السيرفر: $response");
+
+//       // معالجة البيانات (تأكد من استيراد دالة handdlingData)
+//       var statusRequest = handdlingData(response);
+
+//       if (statusRequest == StatusRequest.success) {
+//         if (response['status'] == "success") {
+//           print("**************** تم تحديث البيانات بنجاح في الخلفية");
+//           // يمكنك هنا إضافة كود لحفظ البيانات في Local Storage (مثل SharedPreferences)
+//         }
+//       }
+      
+//       return Future.value(true); // نجاح المهمة
+//     } catch (e) {
+//       print("**************** خطأ في الخلفية: ${e.toString()}");
+//       return Future.value(false); // فشل المهمة (سيحاول النظام إعادة التشغيل لاحقاً)
+//     }
+//   });
+// }
+
+// Future<void> main() async {
+//   // التأكد من تهيئة Flutter قبل أي شيء
+//   WidgetsFlutterBinding.ensureInitialized(); 
+
+//   // تهيئة خدماتك الخاصة (SharedPrefs, إلخ)
+//   await inititalServices(); 
+
+//   // 2. تهيئة Workmanager
+//   await Workmanager().initialize(
+//     callbackDispatcher,
+//     isInDebugMode: true // اجعلها false عند رفع التطبيق للمتجر
+//   );
+
+//   // 3. تسجيل المهمة الدورية (تكرار كل ساعة)
+//   await Workmanager().registerPeriodicTask(
+//     "1", // معرف فريد للمهمة
+//     "simplePeriodicTask", 
+//     frequency: const Duration(hours: 1),
+//     initialDelay: const Duration(minutes: 1),
+//     constraints: Constraints(
+//       // لا تعمل المهمة إلا في حالة وجود إنترنت
+//       networkType: NetworkType.connected,
+//     ),
+//   );
+
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     // التأكد من وضع الكنترولر المسؤول عن اللغة أو الثيم
+//     Localcontroller maincontroller = Get.put(Localcontroller());
+    
+//     return GetMaterialApp(
+//       translations: Mytranslation(),
+//       debugShowCheckedModeBanner: false,
+//       theme: maincontroller.appTheme,
+//       getPages: routes,
+//       initialBinding: InitialBindings(),
+//     );
+//   }
+// }
+
+//============تم التعدل على كود gemina بواسطه كلود 1-5-
+
+// @pragma('vm:entry-point')
+// void callbackDispatcher() {
+//   Workmanager().executeTask((task, inputData) async {
+//     try {
+//       // ✅ تهيئة Flutter أولاً
+//       WidgetsFlutterBinding.ensureInitialized();
+      
+//       // ✅ تهيئة الخدمات الأساسية فقط (بدون GetX)
+//       await inititalServices();
+      
+//       // ✅ استخدام مباشر بدون GetX
+//       final crud = Crud();
+//       final homeData = HomeData(crud);
+      
+//       var response = await homeData.getData();
+//       var statusRequest = handdlingData(response);
+      
+//       if (statusRequest == StatusRequest.success &&
+//           response['status'] == "success") {
+//         // حفظ البيانات في SharedPreferences مثلاً
+//         print("✅ تم التحديث بنجاح");
+//       }
+      
+//       // ✅ تنظيف الموارد
+//       crud.dispose(); // إن وُجد
+      
+//       return true;
+//     } catch (e) {
+//       print("❌ خطأ: $e");
+//       return false;
+//     }
+//   });
+// }
