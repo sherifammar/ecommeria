@@ -28,7 +28,7 @@ class Reportingcontroller extends GetxController {
   
   List<FlSpot>? dummyData1;
 
-  getChart() async {
+  getChart() async { // make chart between month and years -- chart :  x = month , y = total price of items in this month
     reportingdata.clear();
     statusRequest = StatusRequest.loading; // for  loading
     update();
